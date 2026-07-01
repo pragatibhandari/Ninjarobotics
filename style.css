@@ -314,6 +314,14 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 800; }
 
 .btn--outline:hover { background: rgba(0, 229, 204, 0.08); }
 
+/* Hero robot image */
+.hero__robot-img {
+  width: clamp(220px, 30vw, 380px);
+  height: auto;
+  margin: var(--space-10) auto 0;
+  filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.45));
+}
+
 /* ── 7. Ticker ────────────────────────────────────────────── */
 
 .ticker {
@@ -436,7 +444,7 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 800; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
-  align-items: center;
+  align-items: start;
   margin-top: var(--space-12);
 }
 
@@ -444,14 +452,45 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 800; }
   background: var(--color-bg-card);
   border: 1px solid rgba(0,229,204,0.15);
   border-radius: var(--radius-xl);
-  padding: var(--space-8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
+  padding: var(--space-6);
 }
 
-.robot-vis svg { width: 100%; max-width: 340px; }
+.robot-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.robot-gallery__item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.robot-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.robot-gallery__item figcaption {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-muted);
+  background: var(--color-bg-alt);
+}
+
+.robot-gallery__item--diagram {
+  background: #fff;
+}
+
+.robot-gallery__item--diagram figcaption {
+  color: #5F5E5A;
+  background: #fff;
+}
 
 /* Feature list */
 .feature-list { margin-top: var(--space-6); }
