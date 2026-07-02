@@ -182,13 +182,21 @@ function renderTimeline() {
 function renderTeam() {
   const grid = qs("#teamGrid");
   if (!grid) return;
-  SITE_DATA.team.forEach(({ name, role, initial }) => {
+
+  SITE_DATA.team.forEach(({ name, role, initial, img }) => {
     const member = el("div", "member");
     member.innerHTML = `
-      <div class="member__avatar" aria-hidden="true">${initial}</div>
+      <div class="member__avatar-wrap">
+        <div class="member__avatar member__avatar--fallback" aria-hidden="true">${initial}</div>
+        ${img ? `<img class="member__avatar member__avatar--photo" src="${img}" alt="${name}" loading="lazy">` : ""}
+      </div>
       <h3 class="member__name">${name}</h3>
       <p class="member__role">${role}</p>
     `;
+    if (img) {
+      const photo = member.querySelector(".member__avatar--photo");
+      photo.addEventListener("error", () => photo.remove());
+    }
     grid.append(member);
   });
 }

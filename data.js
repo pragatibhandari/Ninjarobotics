@@ -154,19 +154,21 @@ const SITE_DATA = {
   ],
 
   /* ── Team members ────────────────────────────────────── */
+  /* Drop each person's photo into assets/team/ using the filename below.
+     Until a real photo exists at that path, the site falls back to an
+     initials avatar automatically — no code changes needed. */
   team: [
-    { name: "Khaeer",     role: "Operations",        initial: "K" },
-    { name: "Neha",       role: "Business",           initial: "N" },
-    { name: "Shafay",     role: "Robotic Engineer",   initial: "S" },
-    { name: "Zulqarnain", role: "AI / ML Engineer",   initial: "Z" },
-    { name: "Pragati",    role: "R & D",              initial: "P" },
+    { name: "Khaeer",     role: "Operations",        initial: "K", img: "assets/team/khaeer.jpeg" },
+    { name: "Neha",       role: "Business",           initial: "N", img: "assets/team/neha.jpeg" },
+    { name: "Shafay",     role: "AI / ML Engineer",   initial: "S", img: "assets/team/shafay.jpeg" },
+    { name: "Zulqarnain", role: "R & D",   initial: "Z", img: "assets/team/zulqarnain.jpeg" },
+    { name: "Pragati",    role: "Robotics Engineer",              initial: "P", img: "assets/team/pragati.jpeg" },
   ],
 
   /* ── Contact info ────────────────────────────────────── */
   contact: [
     { icon: "📍", text: "Vaasa, Finland" },
     { icon: "🤖", text: "NinjaRobotics" },
-    { icon: "✉️", text: "hello@ninjarobotics.fi" },
   ],
 
 };

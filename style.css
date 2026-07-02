@@ -26,7 +26,7 @@
 
 :root {
   /* Colours */
-  --color-bg:        #0D1B2A;
+  --color-bg:        #1a1a2e;
   --color-bg-alt:    #132236;
   --color-bg-card:   #162840;
   --color-teal:      #00E5CC;
@@ -654,40 +654,57 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 800; }
 /* ── 14. Team ─────────────────────────────────────────────── */
 
 .team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-6);
   margin-top: var(--space-12);
-  justify-content: center;
 }
 
 .member {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-6) var(--space-8);
+  padding: var(--space-8) var(--space-5);
   text-align: center;
-  min-width: 150px;
-  transition: border-color var(--transition-base), transform var(--transition-base);
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .member:hover {
   border-color: var(--color-teal);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.member__avatar-wrap {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto var(--space-4);
 }
 
 .member__avatar {
-  width: 60px;
-  height: 60px;
+  width: 92px;
+  height: 92px;
   border-radius: var(--radius-full);
+}
+
+.member__avatar--fallback {
+  position: absolute;
+  inset: 0;
   background: linear-gradient(135deg, var(--color-teal-dark), var(--color-accent));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: 900;
   color: var(--color-bg);
-  margin: 0 auto var(--space-3);
+}
+
+.member__avatar--photo {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
 }
 
 .member__name { font-size: var(--text-base); font-weight: 700; }
