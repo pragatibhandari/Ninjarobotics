@@ -59,10 +59,6 @@ const SITE_DATA = {
       desc: "Collects microplastics and fine debris close to the ground, even on rough rubble and gravel.",
     },
     {
-      title: "Foldable gripper arm",
-      desc: "Targets larger discrete fragments — metal pieces, cigarette butts — with a precise pick-and-place mechanism.",
-    },
-    {
       title: "Metal detector disc",
       desc: "Inductive sensor at the arm tip pre-screens ground before picking — catches what cameras alone miss.",
     },
