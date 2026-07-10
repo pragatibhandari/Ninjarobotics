@@ -60,7 +60,7 @@ const SITE_DATA = {
     },
     {
       title: "Metal detector disc",
-      desc: "Inductive sensor at the arm tip pre-screens ground before picking — catches what cameras alone miss.",
+      desc: "Inductive sensor at the arm tip pre-screens ground before picking catches what cameras alone miss.",
     },
     {
       title: "LiDAR + stereo camera",
@@ -96,7 +96,7 @@ const SITE_DATA = {
     {
       num: 4,
       title: "Navigate safely",
-      desc: "Workers and machinery are detected and avoided automatically — no human supervision needed.",
+      desc: "Workers and machinery are detected and avoided automatically no human supervision needed.",
     },
     {
       num: 5,
