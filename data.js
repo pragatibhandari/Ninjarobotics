@@ -167,4 +167,10 @@ const SITE_DATA = {
     { icon: "🤖", text: "NinjaRobotics" },
   ],
 
+  /* ── Social media channels ──────────────────────────────── */
+  social: [
+    { name: "linkedin",  label: "LinkedIn",  url: "https://www.linkedin.com/company/ninjarobotics/?viewAsMember=true" },
+    { name: "instagram", label: "Instagram", url: "https://www.instagram.com/ninjarobotics8?igsh=MTFzajdnZjV6OWkxag%3D%3D" },
+  ],
+
 };
